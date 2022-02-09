@@ -11,7 +11,8 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 import keys from "./keys";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([{ score: 1 }]);
+  const [total, setTotal] = useState(0);
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
@@ -19,12 +20,11 @@ function App() {
     init();
     //console.timeEnd();
   }, []);
-
+  //html
   return (
     <div className="App">
       <div className="topWrapper">
         <img className="logo" src={logo}></img>
-
         <div className="titles">
           <div className="title">
             <img className="timg" src={stanga}></img>
@@ -39,7 +39,21 @@ function App() {
         </div>
         <img className="logoJB" src={logoJB}></img>
       </div>
-
+      <p className="info pc">
+        În total s-au salvat aproximativ:{" "}
+        <mark className="copaci">{(total * 0.008).toFixed(2)} copaci</mark>,{" "}
+        <mark className="petrol">
+          {(total * 0.217 * 3.7).toFixed(1)}L de petrol
+        </mark>{" "}
+        si{" "}
+        <mark className="apa">{(total * 2.402 * 3.7).toFixed()}L de apa</mark>
+      </p>
+      <div className="info mobile">
+        <p>În total s-au salvat aproximativ:</p>
+        <p className="copaci">{(total * 0.008).toFixed(2)} copaci</p>
+        <p className="petrol">{(total * 0.217 * 3.7).toFixed(1)}L de petrol</p>
+        <p className="apa">{(total * 2.402 * 3.7).toFixed()}L de apa</p>
+      </div>
       <div className="bottomWrapper">
         <div className="table">
           <input
@@ -84,6 +98,7 @@ function App() {
       </div>
     </div>
   );
+
   async function init() {
     const SPREADSHEET_ID = "1-745exi5JKWNBcM3n1j839mykXjLm7ypW8CYkV20G_8";
     const SHEET_ID = "0";
@@ -129,7 +144,7 @@ function App() {
             .map((info, i) =>
               info.rank === undefined ? { ...info, rank: i + 1 } : info
             );
-
+          setTotal(getTotal(finalData));
           setData(finalData);
           setDisplayData(finalData);
           // console.log(finalData);
@@ -138,6 +153,10 @@ function App() {
     } catch (e) {
       console.error("Error: ", e);
     }
+  }
+  function getTotal(arr) {
+    console.log(arr.reduce((sum, row) => sum + row.score));
+    return arr.reduce((sum, row) => sum + row.score, 0);
   }
   function normalised(string) {
     return string
@@ -155,7 +174,7 @@ function App() {
   function sortBy(event) {
     const method = event.currentTarget.id;
     setDisplayData([...displayData].sort(getSortMethod(method)));
-    console.log(displayData)
+    console.log(displayData);
   }
   function getSortMethod(method) {
     return (curr, next) => {
@@ -163,12 +182,17 @@ function App() {
         case "name":
           return curr.name > next.name ? 1 : -1;
         default:
-          if(curr.score < next.score ){return 1}
-              else if (curr.score == next.score && curr.name > next.name ) {return 1}
-              else {return -1};}
+          if (curr.score < next.score) {
+            return 1;
+          } else if (curr.score === next.score && curr.name > next.name) {
+            return 1;
+          } else {
+            return -1;
+          }
       }
     };
   }
+}
 
 function Table({ table }) {
   return table.map((item, i) => <Row row={item} key={i} />);

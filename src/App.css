@@ -8,7 +8,7 @@
 }
 
 .table {
-  padding-top: 15vh;
+  padding-top: 10vh;
   padding-left: 1vw;
   display: flex;
   flex-direction: column;
@@ -60,12 +60,12 @@
 .logo {
   display: flex;
   align-self: left;
-  height: 6vw;
+  height: 9vw;
 }
 .logoJB {
   display: flex;
   align-self: right;
-  height: 8vw;
+  height: 10vw;
 }
 .App {
   display: flex;
@@ -118,7 +118,7 @@
 }
 .para {
   background-image: url("./para.png");
-  height: 1000vw;
+  height: 500vw;
   width: 50vw;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -156,10 +156,44 @@
   box-shadow: none;
   -webkit-appearance: none;
 }
+.info {
+  text-align: center;
+  font-family: clasa;
+  font-size: 2vw;
+}
+.mobile {
+  display: none;
+}
+mark {
+  color: #dc6b33;
+  background: none;
+}
+.copaci {
+  color: #90ac72;
+}
+.petrol {
+  color: #62143d;
+}
+.apa {
+  color: #4dc2e2;
+}
 @media only screen and (max-width: 480px),
   only screen and (max-width: 768px) and (orientation: portrait) {
   .para {
     display: none;
+  }
+  .info {
+    font-size: 2vh;
+  }
+  .info p {
+    padding: 0;
+    margin: 0;
+  }
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
   }
   .bottomWrapper {
     justify-content: center;
@@ -195,10 +229,10 @@
     width: 20%;
   }
   .logo {
-    height: 6vh;
+    height: 11vh;
   }
   .logoJB {
-    height: 8vh;
+    height: 12vh;
   }
   .search {
     font-size: 3vh;
