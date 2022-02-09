@@ -1,5 +1,5 @@
 import logo from "./logo.png";
-import logoJB from "./mail.png";
+import logoJB from "./textBorderLogo.png";
 import para from "./para.png";
 import stanga from "./stanga.png";
 import dreapta from "./dreapta.png";

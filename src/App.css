@@ -40,6 +40,7 @@
 .ttext {
   margin: 0;
   align-self: center;
+  width: 100%;
 }
 .timg {
   height: 4vw;
@@ -155,7 +156,8 @@
   box-shadow: none;
   -webkit-appearance: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px),
+  only screen and (max-width: 768px) and (orientation: portrait) {
   .para {
     display: none;
   }
@@ -180,8 +182,12 @@
   }
   .title {
     font-size: 3.5vh;
+    width: 90%;
+    text-align: center;
   }
-
+  .ttext {
+    align-self: center;
+  }
   .timg {
     height: 3.5vh;
   }
