@@ -40,7 +40,7 @@ function App() {
         <img className="logoJB" src={logoJB}></img>
       </div>
       <p className="info pc">
-        În total s-au salvat aproximativ:{" "}
+        În total ați salvat aproximativ:{" "}
         <mark className="copaci">{(total * 0.008).toFixed(2)} copaci</mark>,{" "}
         <mark className="petrol">
           {(total * 0.217 * 3.7).toFixed(1)}L de petrol
@@ -49,7 +49,7 @@ function App() {
         <mark className="apa">{(total * 2.402 * 3.7).toFixed()}L de apa</mark>
       </p>
       <div className="info mobile">
-        <p>În total s-au salvat aproximativ:</p>
+        <p>În total ați salvat aproximativ:</p>
         <p className="copaci">{(total * 0.008).toFixed(2)} copaci</p>
         <p className="petrol">{(total * 0.217 * 3.7).toFixed(1)}L de petrol</p>
         <p className="apa">{(total * 2.402 * 3.7).toFixed()}L de apa</p>
