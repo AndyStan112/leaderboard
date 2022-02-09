@@ -151,7 +151,7 @@
   background-size: 4%;
   background-repeat: no-repeat;
   background-position: left center;
-  padding-left: 3.5vw;
+  padding-left: 3.7vw;
   box-shadow: none;
   -webkit-appearance: none;
 }
@@ -178,8 +178,23 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .title {
+    font-size: 3.5vh;
+  }
 
+  .timg {
+    height: 3.5vh;
+  }
   .score {
     width: 20%;
+  }
+  .logo {
+    height: 6vh;
+  }
+  .logoJB {
+    height: 8vh;
+  }
+  .search {
+    font-size: 3vh;
   }
 }
