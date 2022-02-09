@@ -125,7 +125,7 @@ function App() {
                 score,
               };
             })
-            .sort((curr, next) => (curr.score < next.score ? 1 : -1))
+            .sort(getSortMethod("score"))
             .map((info, i) =>
               info.rank === undefined ? { ...info, rank: i + 1 } : info
             );
@@ -155,20 +155,21 @@ function App() {
   function sortBy(event) {
     const method = event.currentTarget.id;
     setDisplayData([...displayData].sort(getSortMethod(method)));
+    console.log(displayData)
   }
   function getSortMethod(method) {
     return (curr, next) => {
       switch (method) {
-        case "score":
-          return curr.score < next.score ? 1 : -1;
         case "name":
           return curr.name > next.name ? 1 : -1;
         default:
-          return curr.score < next.score ? 1 : -1;
+          if(curr.score < next.score ){return 1}
+              else if (curr.score == next.score && curr.name > next.name ) {return 1}
+              else {return -1};}
       }
     };
   }
-}
+
 function Table({ table }) {
   return table.map((item, i) => <Row row={item} key={i} />);
 }
