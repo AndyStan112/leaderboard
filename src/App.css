@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: clasa;
+  src: url("PinkChicken-Regular.ttf");
+}
+@font-face {
+  font-family: title;
+  src: url("PinkChicken-Regular.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table {
+  padding-top: 15vh;
+  padding-left: 1vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  width: 50vw;
+  font-family: clasa;
+  font-size: 2vw;
 }
-
-.App-link {
-  color: #61dafb;
+.subtitle {
+  font-size: 3vw;
+  font-family: title;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
 }
+.title {
+  font-size: 4vw;
+  align-self: center;
+  font-family: title;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.ctext {
+  margin: 0;
+  align-self: center;
+}
+.ttext {
+  margin: 0;
+  align-self: center;
+}
+.timg {
+  height: 4vw;
+  align-self: center;
+  padding-right: 1vw;
+  padding-left: 0.5vw;
+}
+.cimg {
+  height: 5vw;
+  align-self: center;
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-self: left;
+  height: 6vw;
+}
+.logoJB {
+  display: flex;
+  align-self: right;
+  height: 8vw;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background-color: #ffe1c7;
+}
+.cell {
+  padding-left: 5px;
+}
+.row {
+  width: 100%;
+  height: 2.5vw;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px dotted black;
+}
+.header {
+  width: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: flex;
+  justify-content: flex-start;
+  /* border: 2px dotted black;
+  border-top: 2px dotted black; */
+}
+.rank {
+  width: 6%;
+}
+.name {
+  width: 47%;
+}
+.score {
+  width: 47%;
+}
+.header .rank {
+  background-color: #e59959;
+}
+.header .name {
+  background-color: #ffce34;
+}
+.header .score {
+  background-color: #e59959;
+}
+.header > .cell:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.header > .cell:focus {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+.para {
+  background-image: url("./para.png");
+  height: 1000vw;
+  width: 50vw;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 40vw;
+}
+.bottomWrapper {
+  display: flex;
+  flex-direction: row;
+}
+.topWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.titles {
+  display: flex;
+  padding-top: 2vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+.search {
+  background-color: #dfbbab;
+  width: 100%;
+  border: 2px dotted black;
+  font-size: 2vw;
+  background-image: url("./loupe.png");
+  background-size: 4%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 3.5vw;
+  box-shadow: none;
+  -webkit-appearance: none;
 }
