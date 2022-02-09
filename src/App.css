@@ -155,3 +155,31 @@
   box-shadow: none;
   -webkit-appearance: none;
 }
+@media only screen and (max-width: 768px) {
+  .para {
+    display: none;
+  }
+  .bottomWrapper {
+    justify-content: center;
+  }
+  .table {
+    padding-top: 2vh;
+    width: 90%;
+    font-size: 4vh;
+  }
+  .row {
+    height: 4.8vh;
+  }
+  .rank {
+    width: 10%;
+  }
+  .name {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .score {
+    width: 20%;
+  }
+}
