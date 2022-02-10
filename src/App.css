@@ -8,7 +8,7 @@
 }
 
 .table {
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-left: 1vw;
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@
 }
 .para {
   background-image: url("./para.png");
-  height: 500vw;
+  height: auto;
   width: 50vw;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

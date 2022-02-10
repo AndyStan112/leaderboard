@@ -1,13 +1,8 @@
-body {
-  height: 100000vh;
-  margin: 0;
-}
+#root,
+body,
 html {
-  height: 100000vh;
-}
-#root {
-  height: 100000vh;
-  color: 525252;
+  height: auto;
+  margin: 0;
 }
 button {
   background: none;

@@ -155,7 +155,6 @@ function App() {
     }
   }
   function getTotal(arr) {
-    console.log(arr.reduce((sum, row) => sum + row.score));
     return arr.reduce((sum, row) => sum + row.score, 0);
   }
   function normalised(string) {

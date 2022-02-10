@@ -1,13 +1,16 @@
-let keys={
-  "type": "service_account",
-  "project_id": "leaderboard-340607",
-  "private_key_id": "48700ed95fdabdbee538f140539d4a4aa260ee34",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDoGyn5oCExoAOb\ng7fqnpkcQT4Vuk4GX5x41lzYklvrYsxXoX6pQ7qGYPNDElZtk/5fj5td4yAc8cei\nRvvdxlUiylqL98IKx4U9TqGgLpzT6QFz76GN1t7LDf9Hf0qd58myXGK41itHkOTc\nyBfknqIiE9BGWm7dKoz+oiEpUD6voa3Hr1lPc2mWkSRUPfji6LNwXz60ow1+uJ0s\n1Bl10rf4klTVhNP/4Xn15UiQ6ZUiKf54kWgBd76PRSnP5WkQUpy10HcwoXPN8y+T\no7A8SPyMgIqD3HUMiX0a6+Dj4W6UUThqAUfaK0BubZv6HB/mjz8j+aIyHE7w1MYI\nZUcKRVVHAgMBAAECggEAEdhPeIW7MkQ0gsxfDjF2DBoSr+ZMVr5wb/SV3CtvLcBs\nKCtJFbJuBiQwum4P1F+V0GW2HZh3a5ebMFAiJSw5Ihz0q+Dh5k+YtYdKHd/3kW35\n/Uk7M9sv8zn279mgNFZnHMjFk6MZCL43GlJio+Jzt12r8advm/QdivuOw80Lmhe/\n9IwFS0pZKHu+dVelhhJ5g9Qj63CsuH9EEftnO/bgPM7qYtLgW5hJEMLweQbhDkna\ngtfzpRqY2u7AoU6VoFYH3DNK/6VYg8sSuzDGXxTw83A3dJWgnHwXgrqEGqCs03W5\nwxAZiVxNnxkxan+/lW90RB08AGCC2YClPdT/gfWHwQKBgQD6Kul96aAXtQ/tAI64\nMDp8hERSlTSu3vwpT7uU5sf/I3eNE1/o0Qe+wvJHxzYDu22WeOsPiNhQILMS0cSP\n7T1q+Woaq1MnkRP/rXksYhZWOnnO39mngdkKpAIMWv9J94/Xnor4WPearqj+sbPm\nvqTKmcVCfR0CiYTqLgSjOt83SQKBgQDthHRWLsTM015Qii2mkERr2Q2W/czuLdx3\nUqgAw29x/VGxYfP7c4JPO0gGeuG7APlViYRHr2FqOM2Fv8bwoYIdXhPBgurX3ZQi\npFhdhGcUuMzv1GRcCHOunL8TejYapbQJ1zj5DvYwUEGBhiEffS9mEJkIpLaDpak1\nJcwDCrBYDwKBgQCfjRrZ6VTnid0cZQyhQHEs1RbWLL8rAKCGoImckAviF3a6DS9Q\nR3DPI3pueQlkG/fqzjfs8nQztoc/a3YX7VEMlwIq/DXOuGKu4K61teFVIXpqjK4+\nfTw14yBDTQ4g2Llu5Xjwp51TlC3IMwHwGorzhFsg6rbD1X1l9e+TQ4r1sQKBgFJ4\nv3x9WNBWRFVq5VcEmP1prJJVJic9vWOhS7yYH8ZQ02DoRjN1dDXWu7ekS2UHfYv5\n5/iMKSMc/iAG6yj6q5dO50U2FB1ITvuIXTZ7lt9XG7Ha6c4bES/8NUyqDsdJ6i3Q\nkXPJgipcc6Jp1G5+pUqnULvzlXw4tXxC14fm2jx5AoGBALXluRPWhZRvCWTKAlxD\neB4Rt0VXdqFVfGN0afoeEGHYtMK1kekDe0uh9QoFH3jORDZjMc18AUZE2Rv0Jwy4\n3/niqig3dHPUQ86O+CyS0vxozcsSdlFfOABmk8Z5I/GyZxuHrKr1oH9xLfbwwWsf\nJm3jj4gfoPKpQc4bJ7v8/BiW\n-----END PRIVATE KEY-----\n",
-  "client_email": "junkbusters-leaderboard@leaderboard-340607.iam.gserviceaccount.com",
-  "client_id": "117284360307503242357",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/junkbusters-leaderboard%40leaderboard-340607.iam.gserviceaccount.com"
-}
-export default keys
+let keys = {
+  type: "service_account",
+  project_id: "leaderboard-340607",
+  private_key_id: "1895fd51b5dec8a95077d6335f1d1d7ced5b7fa5",
+  private_key:
+    "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwmMXtipbHoBpp\n/52CQYsRkwuQC7Vh6taij1DmMYbCXK0IjWTMhkbNeWk2MhVxvzzZb2wzs3NHVxAD\nB9ynyjHo26SLdb+qq9VEcYnZi567f5Ragpd3M1aLJJdzX8DxXJglq8PocT6MisiU\ngjsXQ2ZykbuoCWVwl8DNN0zNjtw2LCXWxqiG+8sGrpXm8q8DsGQR871DF39YGkfa\n72GgkXuKXBixB0xKcixv+n2yV1ZJTlapKb3Zr4RwiIIJePm5RpEYpx9giKABjTqA\n0aFjyfdcAOCieIKn4gY05bnHraRKXx5Gw5JoO3bFC/nKUrg5OQXXxXm9WnlbOyvZ\nuAZVjN6lAgMBAAECggEABZWth0lj9To/1eFiE4iQKmwBthE13bKtxFRdAXoIaOvB\n3mEw5K7DHRZx8ZUQ0QtPuMeZh9m/ISN24nyCMsahV1vN+jd/PJliLV/Ah6alzFFf\nlNosnJFPYPCZw6nAAgjgIU/9qjpUlJeVZ+yci/5A2MDCb5WR6jTeXOp2Ue39CXPp\nDJkdTcF5I3rLHLH5uV5pgXTRELI7F1Zq9H/u4CEcq5C1+eRggVjW0cPsNMxEtCIp\nIPUYGCvenqSDP4Iw7G8qOYtLUNr0ftwij1vMv3Auw5BO623FsgukftCaaZOYT6Du\nlLOqNfgmn4InWUNJSR10APaLM9HM2zZ0HKVEa58qmQKBgQDxGwDWFQuw//fQ7D2h\n0orr9EBJhzhOWMbuKDA0sKs8xw9nkv0ybaHnAa6FBP5r7XK8wLjApTKU1+5JHirH\nVatkE/Tr53A/Yef8hPTEEAq8jHyBSVwX/oj8KR3k46i2mxksOBJQrRN+GR2pmVbr\nURsMHfUg5XS4c4MAN9AA0f4A3QKBgQC7gZZ21MgW+rXC2ZoRY4sdh7vv4P9IzUW3\n23Xi2SENY+h9ZM7mJWagroT4fJYh/GS6qntQc4lKrE9CU30v31BdX2tZQZMhfOpv\nwkRILG+7ldQiHVNZokLQVQHPOw5TUY2bANULVtJnkrP41mwWZ5LcBC9OB7i1be4Q\nhnFDEA5UaQKBgGsVFir+z+F93d+hfMIJU3/2TDMb5ksNrNSLbtWH/ZWRx2q14tRp\n0rVZjtwvWpwuqn3gjm2pMSzgNkmtJ0y+5M8e+fFoKfdMkY8aseb+RPZ24rk9DrTt\nbIOp80f8QKtReT2lbaT9KaIgn4b6vprmu7+G8p74qf1d+Dm5kB09JrXVAoGAIJ0G\nlb6m2tBaovyEPrgIr2c3eh6xaHFDyhni5EUN6a1R99V74y3oLtSMDkhlOJ4Uyx7x\n+elOnO1hj9DDunrmGIeLPWgZdj6q7CtnAwKvoHoL/q8JG1MMuf2/JdNIx5cswSQg\n6ir8x8UNhp+NB0yWj6wuqizPpMbtHHS16Is3YtkCgYEA5hSbNORBuImdOFUecGdF\nwH1hPhfimcah0JSwH0FIft6q9hjzTBr3rd/PygbWdQBj7BntDG5g0f1fU4i/oO/1\nvfp9cke4c7GghuNDzqsjR0Nd1d/ZgVFsTONSVBxZxLBFf0Efapw6PzQFTyBi92H0\n93SSmAKukf2pLSPCcrlBh+4=\n-----END PRIVATE KEY-----\n",
+  client_email:
+    "junkbusters-leaderboard@leaderboard-340607.iam.gserviceaccount.com",
+  client_id: "117284360307503242357",
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+  client_x509_cert_url:
+    "https://www.googleapis.com/robot/v1/metadata/x509/junkbusters-leaderboard%40leaderboard-340607.iam.gserviceaccount.com",
+};
+export default keys;
