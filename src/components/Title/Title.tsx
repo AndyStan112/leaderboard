@@ -10,7 +10,9 @@ const Title = () => {
     <div className={title_style.container}>
       <Logo title="Cleanup Challenge" logo={projectLogo} />
       <Heading />
-      <Logo title="Un proiect" logo={junkbustersLogo} />
+      <Logo title="Un proiect" logo={junkbustersLogo}
+      junkbusters = {true}
+      />
     </div>
   );
 };

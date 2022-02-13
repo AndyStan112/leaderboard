@@ -102,9 +102,15 @@ const Leaderboard = () => {
       <div className={leaderboard_style.leaderboard}>
         <Searchbar />
         <div className={leaderboard_style.ranking}>
-          <Rows firstColumn="NR" secondColumn="Nume" thirdColumn="Scor" />
+          <Rows
+            firstColumn="NR"
+            secondColumn="Nume"
+            thirdColumn="Scor"
+            labelRow={true}
+          />
           {displayData.map((batch, index) => (
             <Rows
+              labelRow={false}
               firstColumn={(batch.rank || index).toString()}
               secondColumn={batch.name}
               thirdColumn={batch.score.toString()}

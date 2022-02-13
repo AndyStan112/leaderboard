@@ -16,5 +16,9 @@
 }
 
 .image__container img {
-  max-width: 100%;
+  max-width: calc(100%);
+}
+
+.image__container img.jb {
+  transform: scale(1.4);
 }
