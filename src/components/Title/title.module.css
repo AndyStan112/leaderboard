@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background-color: rgb(100, 255, 38);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

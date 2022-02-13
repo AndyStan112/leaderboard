@@ -1,0 +1,30 @@
+.container {
+  width: 90rem;
+  height: auto;
+  background-color: aqua;
+  display: flex;
+}
+
+.first {
+  min-width: calc(1 / 4 * 90rem);
+  padding: 1rem 0;
+  padding-left: 9rem;
+  background-color: brown;
+  font-size: 1.5rem;
+}
+
+.second {
+  min-width: calc(2 / 4 * 90rem);
+  padding: 1rem 0;
+  padding-left: 4rem;
+  background-color: rgb(105, 59, 15);
+  font-size: 1.5rem;
+}
+
+.third {
+  min-width: calc(1 / 4 * 90rem);
+  padding: 1rem 0;
+  padding-left: 4rem;
+  background-color: brown;
+  font-size: 1.5rem;
+}
