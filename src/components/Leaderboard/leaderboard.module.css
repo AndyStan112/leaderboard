@@ -11,6 +11,7 @@
 .leaderboard {
   position: relative;
   width: 90rem;
+  flex: 1;
   max-height: 100%;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
@@ -60,4 +61,18 @@ li {
   bottom: 100px;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
+}
+
+.loading {
+  position: relative;
+  width: 90rem;
+  flex: 0 0 100%;
+  max-height: 100%;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #2b131a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
