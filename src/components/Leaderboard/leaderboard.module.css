@@ -6,11 +6,14 @@
   overflow: auto;
   flex-direction: column;
   align-items: center;
+  --leaderboard__width: 80rem;
+  --padding: 3rem;
+  overflow-x: hidden;
 }
 
 .leaderboard {
   position: relative;
-  width: 90rem;
+  width: var(--leaderboard__width);
   flex: 1;
   max-height: 100%;
   border-top-left-radius: 3rem;
@@ -65,12 +68,12 @@ li {
 
 .loading {
   position: relative;
-  width: 90rem;
+  width: var(--leaderboard__width);
   flex: 0 0 100%;
   max-height: 100%;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  background-color: #2b131a;
+  background-color: #402f34;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +81,7 @@ li {
 }
 
 .row_type__container {
-  width: 90rem;
+  width: var(--leaderboard__width);
   height: auto;
   display: flex;
   color: whitesmoke;
@@ -90,21 +93,21 @@ li {
 }
 
 .first {
-  min-width: calc(1 / 4 * 90rem);
+  min-width: calc(1 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
-  padding-left: 9rem;
+  padding-left: calc(2 * var(--padding));
   font-size: 1.5rem;
 }
 .second {
-  min-width: calc(2 / 4 * 90rem);
+  min-width: calc(2 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
-  padding-left: 4rem;
+  padding-left: var(--padding);
   font-size: 1.5rem;
 }
 .third {
-  min-width: calc(1 / 4 * 90rem);
+  min-width: calc(1 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
-  padding-left: 4rem;
+  padding-left: var(--padding);
   font-size: 1.5rem;
 }
 
@@ -114,4 +117,39 @@ li {
 
 .br {
   background-color: #7a5f67;
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .container {
+    --leaderboard__width: 35rem;
+    --padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .container {
+    --leaderboard__width: 45rem;
+    --padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+  .container {
+    --leaderboard__width: 60rem;
+    --padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) {
+  .container {
+    --leaderboard__width: 25rem;
+    --padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    --leaderboard__width: 105rem;
+    --padding: 5rem;
+  }
 }

@@ -6,7 +6,7 @@
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 900;
   white-space: nowrap;
 }
@@ -21,4 +21,33 @@
 
 .image__container img.jb {
   transform: scale(1.4);
+}
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .container {
+    width: 5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .title {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+  .title {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) {
+  .container {
+    width: 4rem;
+  }
+  .title {
+    font-size: 0.6rem;
+  }
 }
