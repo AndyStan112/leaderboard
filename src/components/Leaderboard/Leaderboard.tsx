@@ -21,31 +21,36 @@ const search = (input: string, users: User[]): User[] => {
   );
 };
 
+function getSortMethod<T extends User>(method: "name" | "score") {
+  return (curr: T, next: T) => {
+    switch (method) {
+      case "name":
+        return curr.name > next.name ? 1 : -1;
+      case "score":
+        if (curr.score < next.score) {
+          return 1;
+        } else if (curr.score === next.score && curr.name > next.name) {
+          return 1;
+        } else {
+          return -1;
+        }
+      default:
+        return 1;
+    }
+  };
+}
+
+const filter = (type: "name" | "score", users: User[]) => {
+  const filter = users.sort(getSortMethod(type));
+  return filter;
+};
+
 const Leaderboard = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     init();
   }, []);
-
-  function getSortMethod<T extends User>(method: "name" | "score") {
-    return (curr: T, next: T) => {
-      switch (method) {
-        case "name":
-          return curr.name > next.name ? 1 : -1;
-        case "score":
-          if (curr.score < next.score) {
-            return 1;
-          } else if (curr.score === next.score && curr.name > next.name) {
-            return 1;
-          } else {
-            return -1;
-          }
-        default:
-          return 1;
-      }
-    };
-  }
 
   function getTotal<T extends User>(arr: T[]) {
     return arr.reduce((sum, row) => sum + row.score, 0);
@@ -115,12 +120,26 @@ const Leaderboard = () => {
         <div className={leaderboard_style.leaderboard}>
           <Searchbar onInput={(input) => setUsers(search(input, users))} />
           <div className={leaderboard_style.ranking}>
-            <Rows
-              firstColumn="NR"
-              secondColumn="Nume"
-              thirdColumn="Scor"
-              labelRow={true}
-            />
+            <div className={leaderboard_style.row_type__container}>
+              <button
+                onClick={() => setUsers([...filter("score", users)])}
+                className={` ${leaderboard_style.criteria} ${leaderboard_style.first} ${leaderboard_style.br__shade}`}
+              >
+                NR
+              </button>
+              <button
+                onClick={() => setUsers([...filter("name", users)])}
+                className={`${leaderboard_style.criteria} ${leaderboard_style.second} ${leaderboard_style.br}`}
+              >
+                Nume
+              </button>
+              <button
+                className={`${leaderboard_style.criteria} ${leaderboard_style.third} ${leaderboard_style.br__shade}`}
+                onClick={() => setUsers([...filter("score", users)])}
+              >
+                Scor
+              </button>
+            </div>
             {users.map((batch, index) => (
               <Rows
                 labelRow={false}

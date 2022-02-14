@@ -8,41 +8,12 @@ interface RowElements {
   labelRow: boolean;
 }
 
-const Rows: FC<RowElements> = ({
-  firstColumn,
-  secondColumn,
-  thirdColumn,
-  labelRow,
-}) => {
+const Rows: FC<RowElements> = ({ firstColumn, secondColumn, thirdColumn }) => {
   return (
     <div className={rows_style.container}>
-      <div
-        className={
-          labelRow
-            ? `${rows_style.first} ${rows_style.label__first}`
-            : `${rows_style.first}`
-        }
-      >
-        {firstColumn}
-      </div>
-      <div
-        className={
-          labelRow
-            ? `${rows_style.second} ${rows_style.label__second}`
-            : `${rows_style.second}`
-        }
-      >
-        {secondColumn}
-      </div>
-      <div
-        className={
-          labelRow
-            ? `${rows_style.third} ${rows_style.label__first}`
-            : `${rows_style.third}`
-        }
-      >
-        {thirdColumn}
-      </div>
+      <div className={`${rows_style.first}`}>{firstColumn}</div>
+      <div className={`${rows_style.second}`}>{secondColumn}</div>
+      <div className={`${rows_style.third}`}>{thirdColumn}</div>
     </div>
   );
 };
