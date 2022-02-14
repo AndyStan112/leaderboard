@@ -3,7 +3,8 @@ import leaderboard_style from "./leaderboard.module.css";
 import Rows from "./Rows/Rows";
 import Searchbar from "./Searchbar/Searchbar";
 import keys from "../../keys";
-import { GoogleSpreadsheet, GoogleSpreadsheetRow } from "google-spreadsheet";
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import ReactLoading from "react-loading";
 
 interface User {
   name: string;
@@ -11,11 +12,18 @@ interface User {
   rank?: number;
 }
 
-const Leaderboard = () => {
-  const [data, setData] = useState([{ score: 1 }]);
-  const [total, setTotal] = useState(0);
-  const [displayData, setDisplayData] = useState<User[]>([]);
+const search = (input: string, users: User[]): User[] => {
+  console.log({ input });
+  return users.filter((user) =>
+    user.name
+      .toLocaleLowerCase("ro-RO")
+      .includes(input.toLocaleLowerCase("ro-RO"))
+  );
+};
 
+const Leaderboard = () => {
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     init();
   }, []);
@@ -84,12 +92,12 @@ const Leaderboard = () => {
               };
             })
             .sort(getSortMethod("score"))
-            .map((info, i) =>
-              info.rank === undefined ? { ...info, rank: i + 1 } : info
-            ) as User[];
-          setTotal(getTotal(finalData));
-          setData(finalData);
-          setDisplayData(finalData);
+            .map((info, i) => {
+              if (!info.rank) info.rank = i + 1;
+              return info;
+            }) as User[];
+          setLoading(false);
+          setUsers(finalData);
         });
       });
     } catch (e) {
@@ -99,26 +107,31 @@ const Leaderboard = () => {
 
   return (
     <div className={leaderboard_style.container}>
-      <div className={leaderboard_style.leaderboard}>
-        <Searchbar />
-        <div className={leaderboard_style.ranking}>
-          <Rows
-            firstColumn="NR"
-            secondColumn="Nume"
-            thirdColumn="Scor"
-            labelRow={true}
-          />
-          {displayData.map((batch, index) => (
-            <Rows
-              labelRow={false}
-              firstColumn={(batch.rank || index).toString()}
-              secondColumn={batch.name}
-              thirdColumn={batch.score.toString()}
-            />
-          ))}
+      {loading ? (
+        <div className={leaderboard_style.loading}>
+          <ReactLoading />
         </div>
-      </div>
-      {/* <div className={leaderboard_style.ground}></div> */}
+      ) : (
+        <div className={leaderboard_style.leaderboard}>
+          <Searchbar onInput={(input) => setUsers(search(input, users))} />
+          <div className={leaderboard_style.ranking}>
+            <Rows
+              firstColumn="NR"
+              secondColumn="Nume"
+              thirdColumn="Scor"
+              labelRow={true}
+            />
+            {users.map((batch, index) => (
+              <Rows
+                labelRow={false}
+                firstColumn={(batch.rank || index).toString()}
+                secondColumn={batch.name}
+                thirdColumn={batch.score.toString()}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
