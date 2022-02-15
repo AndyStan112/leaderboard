@@ -43,7 +43,7 @@ const Info: UserConsumer = ({ users }) => {
 
   return (
     <div className={info_style.container}>
-      In total ati salvat aproximati:
+      In total ati salvat aproximativ :
       <div className={info_style.info__container}>
         <AnimatePresence>
           {fields.current.map((field) =>
@@ -56,17 +56,14 @@ const Info: UserConsumer = ({ users }) => {
                 key={field.id}
                 initial={{
                   y: -50,
-                  x: 0,
                   opacity: 0,
                 }}
                 animate={{
                   y: 0,
-                  x: 0,
                   opacity: 1,
                 }}
                 exit={{
                   y: 50,
-                  x: 0,
                   opacity: 0,
                 }}
               >
