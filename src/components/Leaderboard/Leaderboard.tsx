@@ -5,12 +5,7 @@ import Searchbar from "./Searchbar/Searchbar";
 import keys from "../../keys";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import ReactLoading from "react-loading";
-
-interface User {
-  name: string;
-  score: number;
-  rank?: number;
-}
+import type { User, UserConsumer } from "../../App";
 
 const search = (input: string, users: User[]): User[] => {
   console.log({ input });
@@ -45,8 +40,7 @@ const filter = (type: "name" | "score", users: User[]) => {
   return filter;
 };
 
-const Leaderboard = () => {
-  const [users, setUsers] = useState<User[]>([]);
+const Leaderboard: UserConsumer = ({ users, setUsers }) => {
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     init();
@@ -55,13 +49,13 @@ const Leaderboard = () => {
   function getTotal<T extends User>(arr: T[]) {
     return arr.reduce((sum, row) => sum + row.score, 0);
   }
+
   async function init() {
     const SPREADSHEET_ID = "1-745exi5JKWNBcM3n1j839mykXjLm7ypW8CYkV20G_8";
     const SHEET_ID = "0";
     const CLIENT_EMAIL = keys.client_email;
     const PRIVATE_KEY = keys.private_key;
     const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
-    const input = document.getElementsByClassName("search");
 
     try {
       await doc.useServiceAccountAuth({
