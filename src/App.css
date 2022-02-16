@@ -10,6 +10,7 @@
 * {
   box-sizing: border-box;
   font-size: 10px;
+  font-family: title;
 }
 
 .container {
@@ -23,4 +24,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  * {
+    font-size: 6px;
+  }
 }

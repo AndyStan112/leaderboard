@@ -22,12 +22,22 @@
 .image__container img.jb {
   transform: scale(1.4);
 }
-@media screen and (min-width: 350px) and (max-width: 500px) {
+
+@media screen and (min-width: 300px) and (max-width: 350px) {
   .container {
-    width: 5rem;
+    width: 7rem;
   }
   .title {
-    font-size: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  .container {
+    width: 7rem;
+  }
+  .title {
+    font-size: 1.8rem;
   }
 }
 

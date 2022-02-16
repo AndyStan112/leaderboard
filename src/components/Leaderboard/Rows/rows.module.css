@@ -9,14 +9,14 @@
   min-width: calc(1 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
   padding-left: calc(2 * var(--padding));
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .second {
-  min-width: calc(2 / 4 * var(--leaderboard__width));
+  width: calc(2 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
   padding-left: var(--padding);
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .label__first {
@@ -31,5 +31,5 @@
   min-width: calc(1 / 4 * var(--leaderboard__width));
   padding: 1rem 0;
   padding-left: var(--padding);
-  font-size: 1.5rem;
+  font-size: 3rem;
 }

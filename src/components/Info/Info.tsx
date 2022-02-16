@@ -6,17 +6,17 @@ import type { User, UserConsumer } from "../../App";
 const info = (total: number) => [
   {
     id: "copaci",
-    info: `${(total * 0.217 * 3.7).toFixed(1)}`,
+    info: `${(total * 0.008).toFixed(2)}`,
     color: `#57C35B`,
   },
   {
     id: "apa",
-    info: `${(total * 0.217 * 3.7).toFixed(1)}`,
+    info: `${(total * 2.402 * 3.7).toFixed()}L`,
     color: "#50C0E4",
   },
   {
     id: "petrol",
-    info: `${(total * 2.402 * 3.7).toFixed()}`,
+    info: `${(total * 0.217 * 3.7).toFixed(1)}L`,
     color: "#78243E",
   },
 ];
@@ -28,11 +28,8 @@ const Info: UserConsumer = ({ users }) => {
   const [id, setID] = useState("");
 
   useEffect(() => {
-    users
-      ? (fields.current = info(
-          users?.reduce((prev, curr) => prev + curr.score, 0)
-        ))
-      : 0;
+    if (users.length)
+      fields.current = info(users.reduce((prev, curr) => prev + curr.score, 0));
   }, [users]);
 
   useEffect(() => {
