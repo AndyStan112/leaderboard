@@ -1,0 +1,35 @@
+.container {
+  width: var(--leaderboard__width);
+  height: auto;
+  display: flex;
+  color: whitesmoke;
+}
+
+.first {
+  min-width: calc(1 / 4 * var(--leaderboard__width));
+  padding: 1rem 0;
+  padding-left: calc(2 * var(--padding));
+  font-size: 3rem;
+}
+
+.second {
+  width: calc(2 / 4 * var(--leaderboard__width));
+  padding: 1rem 0;
+  padding-left: var(--padding);
+  font-size: 3rem;
+}
+
+.label__first {
+  background-color: #7c5d66;
+}
+
+.label__second {
+  background-color: #9b7a84;
+}
+
+.third {
+  min-width: calc(1 / 4 * var(--leaderboard__width));
+  padding: 1rem 0;
+  padding-left: var(--padding);
+  font-size: 3rem;
+}

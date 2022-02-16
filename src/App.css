@@ -7,234 +7,27 @@
   src: url("PinkChicken-Regular.ttf");
 }
 
-.table {
-  padding-top: 5vh;
-  padding-left: 1vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 50vw;
-  font-family: clasa;
-  font-size: 2vw;
-}
-.subtitle {
-  font-size: 3vw;
+* {
+  box-sizing: border-box;
+  font-size: 10px;
   font-family: title;
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  margin: 0;
 }
-.title {
-  font-size: 4vw;
-  align-self: center;
-  font-family: title;
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-}
-.ctext {
-  margin: 0;
-  align-self: center;
-}
-.ttext {
-  margin: 0;
-  align-self: center;
-  width: 100%;
-}
-.timg {
-  height: 4vw;
-  align-self: center;
-  padding-right: 1vw;
-  padding-left: 0.5vw;
-}
-.cimg {
-  height: 5vw;
-  align-self: center;
-}
-.logos {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.logo {
-  display: flex;
-  align-self: left;
-  height: 9vw;
-}
-.logoJB {
-  display: flex;
-  align-self: right;
-  height: 10vw;
-}
-.App {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 0;
-  background-color: #ffe1c7;
-}
-.cell {
-  padding-left: 5px;
-}
-.row {
-  width: 100%;
-  height: 2.5vw;
-  display: flex;
-  justify-content: flex-start;
-  border-bottom: 2px dotted black;
-}
-.header {
-  width: 100%;
 
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fef1e6;
   display: flex;
-  justify-content: flex-start;
-  /* border: 2px dotted black;
-  border-top: 2px dotted black; */
-}
-.rank {
-  width: 6%;
-}
-.name {
-  width: 47%;
-}
-.score {
-  width: 47%;
-}
-.header .rank {
-  background-color: #e59959;
-}
-.header .name {
-  background-color: #ffce34;
-}
-.header .score {
-  background-color: #e59959;
-}
-.header > .cell:hover {
-  background-color: rgba(0, 0, 0, 0.11);
-}
-.header > .cell:focus {
-  background-color: rgba(0, 0, 0, 0.24);
-}
-.para {
-  background-image: url("./para.png");
-  height: auto;
-  width: 50vw;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: right;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: 40vw;
-}
-.bottomWrapper {
-  display: flex;
-  flex-direction: row;
-}
-.topWrapper {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.titles {
-  display: flex;
-  padding-top: 2vw;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
+  align-items: center;
 }
-.search {
-  background-color: #dfbbab;
-  width: 100%;
-  border: 2px dotted black;
-  font-size: 2vw;
-  background-image: url("./loupe.png");
-  background-size: 4%;
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 3.7vw;
-  box-shadow: none;
-  -webkit-appearance: none;
-}
-.info {
-  text-align: center;
-  font-family: clasa;
-  font-size: 2vw;
-}
-.mobile {
-  display: none;
-}
-mark {
-  color: #dc6b33;
-  background: none;
-}
-.copaci {
-  color: #90ac72;
-}
-.petrol {
-  color: #62143d;
-}
-.apa {
-  color: #4dc2e2;
-}
-@media only screen and (max-width: 480px),
-  only screen and (max-width: 768px) and (orientation: portrait) {
-  .para {
-    display: none;
-  }
-  .info {
-    font-size: 2vh;
-  }
-  .info p {
-    padding: 0;
-    margin: 0;
-  }
-  .pc {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
-  .bottomWrapper {
-    justify-content: center;
-  }
-  .table {
-    padding-top: 2vh;
-    width: 90%;
-    font-size: 4vh;
-  }
-  .row {
-    height: 4.8vh;
-  }
-  .rank {
-    width: 10%;
-  }
-  .name {
-    width: 70%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .title {
-    font-size: 3.5vh;
-    width: 90%;
-    text-align: center;
-  }
-  .ttext {
-    align-self: center;
-  }
-  .timg {
-    height: 3.5vh;
-  }
-  .score {
-    width: 20%;
-  }
-  .logo {
-    height: 11vh;
-  }
-  .logoJB {
-    height: 12vh;
-  }
-  .search {
-    font-size: 3vh;
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  * {
+    font-size: 6px;
   }
 }
